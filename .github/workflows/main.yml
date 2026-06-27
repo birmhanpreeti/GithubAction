@@ -1,0 +1,26 @@
+name: preeti Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: 
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run a one-line script
+        run: echo "Hello, world!"
+
+      - name: azure login
+        run: 
+
+      - name: init
+        run: terraform init
+
+      - name: plan
+        run: terraform plan
+
+      - name: apply
+        run: terraform apply -auto-approve
